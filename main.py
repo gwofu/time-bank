@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
-  return 'Hello, Gwowen!'
+  return render_template("home.html")
 
 
 @app.route("/user/<name>")
